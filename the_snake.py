@@ -137,7 +137,7 @@ def handle_keys(game_object):
                 game_object.next_direction = RIGHT
 
 
-def handle_apple_collision(snake: "Snake", apple: "Apple"):
+def handle_apple_collision(snake: 'Snake', apple: 'Apple'):
     """Увеличивает размер змейки при поедании яблока."""
     if snake.get_head_position() == apple.position:
         snake.length += 1
