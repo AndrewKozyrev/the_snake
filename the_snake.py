@@ -49,7 +49,7 @@ class GameObject:
     def draw(self):
         """Метод для отрисовки объектов."""
         raise NotImplementedError(
-            f"Метод draw не реализован в классе {type(self).__name__}"
+            f'Метод draw не реализован в классе {type(self).__name__}'
         )
 
     def draw_cell(self, segment, color=None):
