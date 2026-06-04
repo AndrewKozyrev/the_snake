@@ -1,5 +1,4 @@
 from random import choice
-from abc import ABC, abstractmethod
 
 import pygame
 
@@ -49,16 +48,18 @@ pygame.display.set_caption('Змейка')
 clock = pygame.time.Clock()
 
 
-class GameObject(ABC):
+class GameObject:
     """Базовый класс для игровых объектов."""
 
     def __init__(self, color=None):
         self.position = CENTER_POSITION
         self.body_color = color
 
-    @abstractmethod
     def draw(self):
         """Метод для отрисовки объектов."""
+        raise NotImplementedError(
+            f'Метод draw не реализован в классе {type(self).__name__}'
+        )
 
     def draw_cell(self, segment, color=None):
         """Отрисовка ячейки."""
